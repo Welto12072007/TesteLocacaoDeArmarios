@@ -13,7 +13,6 @@ const AppRouter: React.FC = () => {
   const [currentRoute, setCurrentRoute] = React.useState('dashboard');
 
   React.useEffect(() => {
-    // Simple routing based on hash
     const handleHashChange = () => {
       const hash = window.location.hash.slice(1) || 'dashboard';
       setCurrentRoute(hash);
