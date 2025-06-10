@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPage }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Mobile sidebar */}
-      <div className={`fixed inset-0 flex z-40 lg:hidden ${sidebarOpen ? '' : 'pointer-events-none'}`}>
+      <div className={`fixed inset-0 flex z-40 lg-hidden ${sidebarOpen ? '' : 'pointer-events-none'}`}>
         <div className={`fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity ease-linear duration-300 ${
           sidebarOpen ? 'opacity-100' : 'opacity-0'
         }`} onClick={() => setSidebarOpen(false)} />
@@ -99,7 +99,7 @@ const Layout: React.FC<LayoutProps> = ({ children, currentPage }) => {
       </div>
 
       {/* Desktop sidebar */}
-      <div className="hidden lg:flex lg:flex-shrink-0">
+      <div className={`fixed inset-0 flex z-40 ${sidebarOpen ? '' : 'pointer-events-none'}`}>
         <div className="flex flex-col w-64">
           <div className="flex flex-col h-0 flex-1 border-r border-gray-200 bg-white">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
